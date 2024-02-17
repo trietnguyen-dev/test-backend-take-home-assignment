@@ -17,6 +17,8 @@ module.exports = {
     'prettier',
   ],
   rules: {
+    'react/no-unescaped-entities': 'off',
+    '@next/next/no-page-custom-font': 'off',
     '@next/next/no-html-link-for-pages': 'off',
     'import/no-cycle': 'error',
     'import/no-default-export': 'error',
@@ -58,7 +60,12 @@ module.exports = {
         'newlines-between': 'always',
       },
     ],
-    'prettier/prettier': 'error',
+    'prettier/prettier': [
+      'error',
+      {
+        endOfLine: 'auto',
+      },
+    ],
   },
   overrides: [
     {
